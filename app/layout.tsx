@@ -3,6 +3,7 @@ import { IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { ClerkProvider, SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
+import { Toaster } from "@/components/ui/toaster"
 
 const IBMPlex = IBM_Plex_Sans({ 
   subsets: ["latin"],
@@ -33,6 +34,7 @@ export default function RootLayout({
             <UserButton />
           </SignedIn> */}
           {children}
+          <Toaster />
         </body>
       </html>
     </ClerkProvider>
